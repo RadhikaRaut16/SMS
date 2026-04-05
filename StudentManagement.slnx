@@ -1,7 +1,3 @@
 <Solution>
-  <Project Path="student-management-ui/student-management-ui.esproj">
-    <Build />
-    <Deploy />
-  </Project>
   <Project Path="StudentManagement.API/StudentManagement.API.csproj" />
 </Solution>

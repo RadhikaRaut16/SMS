@@ -76,13 +76,16 @@ builder.Services.AddControllers();
 builder.Services.AddCors(options =>
     options.AddPolicy("AllowAll", policy =>
         policy.WithOrigins(
+            "http://localhost:5173",
+            "https://localhost:5173",
             "http://localhost:3000",
             "https://localhost:3000",
-            "http://localhost:58558",
-            "https://localhost:58558"
+            "http://localhost:7100",
+            "https://localhost:7100"
         )
         .AllowAnyMethod()
-        .AllowAnyHeader()));
+        .AllowAnyHeader()
+        .AllowCredentials()));
 
 // ─── Swagger ─────────────────────────────────────────────────────────────────
 builder.Services.AddEndpointsApiExplorer();
